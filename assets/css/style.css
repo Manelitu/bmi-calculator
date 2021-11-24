@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap');
+
+:root {
+  --primary-color: rgb(17, 86, 102);
+  --primary-color-darker: rgb(9, 48, 56);
+  --primary-color-clearer: rgb(168, 241, 255);
+  --primary-color-transition: hsl(182, 60%, 59%);
+}
+
+* {
+  box-sizing: border-box;
+  outline: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--primary-color);
+  font-family: 'Open sans', sans-serif;
+  font-size: 1.3em;
+  line-height: 1.5em;
+}
+
+.container {
+  max-width: 640px;
+  margin: 50px auto;
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 10px 10px 50px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns  : 1fr 1fr;
+  gap: 20px;
+}
+
+.grid div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column wrap;
+}
+
+.grid h2,
+p {
+  font-size: 0.9em;
+  line-height: 0.8em;
+}
+
+form input,
+form label,
+form button {
+  display: block;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+form input {
+  font-size: 24px;
+  height: 50px;
+  padding: 0 20px;
+}
+
+form input:focus {
+  outline: 1px solid var(--primary-color);
+  box-shadow: 1px 1px 5px var(--primary-color);
+}
+
+form #mySubmit {
+  border: none;
+  background: var(--primary-color);
+  color: #fff;
+  font-size: 18px;
+  font-weight: 700;
+  height: 50px;
+  cursor: pointer;
+  margin-top: 30px;
+  transition: 200ms ease-in-out;
+}
+
+form #mySubmit:hover {
+  background: var(--primary-color-darker);
+}
+
+.resultado {
+  background: var(--primary-color-clearer);
+  display: flex;
+  height: 30px;
+  align-items: center;
+  justify-content: center;
+}
+
+.grid-container {
+  background: var(--primary-color-clearer);
+  border: 1px solid #000;
+  border-radius: 50px;
+  box-shadow: 2px 3px 10px;
+}
+
+.grid-container:hover {
+  transition: 500ms ease-in-out;
+  background: var(--primary-color-transition);
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+}
+
+#resultado {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.positivo {
+  background: var(--primary-color-clearer);
+}
+
+.negativo {
+  background: rgb(248, 100, 100);
+}
